@@ -8,7 +8,4 @@ class Solution:
             elif nums[i]<0: 
                 count_neg +=1
                 
-        if count_pos>count_neg:
-            return count_pos
-        else:
-            return count_neg              
+        return max(count_pos, count_neg)            
