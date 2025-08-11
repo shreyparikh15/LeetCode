@@ -1,7 +1,8 @@
-SELECT MAX(num) as num
-FROM (
+SELECT (
     SELECT num
     FROM MyNumbers
     GROUP BY num
     HAVING COUNT(*)=1
-) AS unique_nums
+    ORDER BY num DESC
+    LIMIT 1
+) as num;
